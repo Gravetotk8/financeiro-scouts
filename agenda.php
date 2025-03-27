@@ -70,8 +70,8 @@
         <a href="index.php" class="btn btn-primary">Voltar para o formulário</a>
     </div>
 
-    <script src="script.js"></script>
-<!-- 
+    <!-- <script src="script.js"></script> -->
+
     <script>
         function gerarCalendario() {
             const mesSelecionado = parseInt(document.getElementById("mes").value);
@@ -133,7 +133,7 @@
         document.getElementById("mes").addEventListener("change", gerarCalendario);
         document.getElementById("ano").addEventListener("change", gerarCalendario);
         document.getElementById("status").addEventListener("change", gerarCalendario);
-    </script> -->
+    </script>
 
 </body>
 
