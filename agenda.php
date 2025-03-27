@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="icone.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Agenda de Pagamentos</title>
 </head>
 
@@ -70,9 +70,9 @@
         <a href="index.php" class="btn btn-primary">Voltar para o formulário</a>
     </div>
 
-    <!-- <script src="script.js"></script> -->
+    <script src="assets/js/script.js"></script>
 
-    <script>
+    <!-- <script>
         function gerarCalendario() {
             const mesSelecionado = parseInt(document.getElementById("mes").value);
             const anoSelecionado = parseInt(document.getElementById("ano").value);
@@ -133,7 +133,7 @@
         document.getElementById("mes").addEventListener("change", gerarCalendario);
         document.getElementById("ano").addEventListener("change", gerarCalendario);
         document.getElementById("status").addEventListener("change", gerarCalendario);
-    </script>
+    </script> -->
 
 </body>
 
