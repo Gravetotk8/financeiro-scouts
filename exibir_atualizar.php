@@ -43,7 +43,7 @@ require 'PHP/conect_dados.php';
                     <tbody>
 
                         <?php
-                        require 'PHP/import_dados.php';
+                        require 'assets/php/import_dados.php';
                         ?>
 
                     </tbody>

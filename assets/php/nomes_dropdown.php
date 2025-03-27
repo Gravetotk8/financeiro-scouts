@@ -1,6 +1,6 @@
 <?php
 
-require 'PHP/config2.php';
+require 'PHP/config.php';
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

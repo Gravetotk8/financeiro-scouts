@@ -23,12 +23,12 @@
         <hr>
 
         <h1 class="text-center">Financeiro</h1>
-        <form id="meuFormulario" action="PHP/processar_formulario.php" method="POST" accept-charset="UTF-8">
+        <form id="meuFormulario" action="assets/php/processar_formulario.php" method="POST" accept-charset="UTF-8">
 
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome:</label>
                 <select class="form-select" id="nome" name="nome">
-                    <?php include 'PHP/nomes_dropdown.php'; ?>
+                    <?php include 'assets/php/nomes_dropdown.php'; ?>
                 </select>
             </div>
 
