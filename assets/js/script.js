@@ -11,7 +11,7 @@ function gerarCalendario() {
     const tabelaCalendario = document.getElementById("calendario");
     tabelaCalendario.innerHTML = "";
 
-    fetch(`get_pagamentos.php?status=${encodeURIComponent(statusSelecionado)}`)
+    fetch(`assets/php/get_pagamentos.php?status=${encodeURIComponent(statusSelecionado)}`)
         .then(response => response.json())
         .then(pagamentos => {
             let diaAtual = 1;
