@@ -5,14 +5,23 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require 'PHP/config.php';
+require_once __DIR__ . '/vendor/autoload.php'; // Inclui o autoload do Composer
+
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__); // Cria uma instância do Dotenv
+$dotenv->load(); // Carrega as variáveis do .env
+
+$servername = $_ENV['SERVERNAME'];
+$username = $_ENV['USERNAME'];
+$password = $_ENV['PASSWORD'];
+$dbname = $_ENV['DBNAME'];
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
     die("Falha na conexão: " . $conn->connect_error);
 }
-
 if (isset($_POST["ids"]) && isset($_POST["status"])) {
     $ids = $_POST["ids"];
     $status = $_POST["status"];

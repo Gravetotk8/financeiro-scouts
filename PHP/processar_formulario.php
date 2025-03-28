@@ -3,7 +3,17 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require 'PHP/config.php';
+require_once __DIR__ . '/vendor/autoload.php';
+
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$servername = $_ENV['SERVERNAME'];
+$username = $_ENV['USERNAME'];
+$password = $_ENV['PASSWORD'];
+$dbname = $_ENV['DBNAME'];
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -16,7 +26,7 @@ $documento = $_POST["documento"];
 $vencimento = $_POST["vencimento"];
 $valor = $_POST["valor"];
 
-$stmt = $conn->prepare("INSERT INTO cadastro_boletos (nome, numero_documento, data_vencimento, valor, status) VALUES (?, ?, ?, ?, 'A PAGAR')"); 
+$stmt = $conn->prepare("INSERT INTO cadastro_boletos (nome, numero_documento, data_vencimento, valor, status) VALUES (?, ?, ?, ?, 'A PAGAR')");
 $stmt->bind_param("sssd", $nome, $documento, $vencimento, $valor);
 
 if ($stmt->execute()) {
