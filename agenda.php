@@ -70,7 +70,7 @@
         <a href="index.php" class="btn btn-primary">Voltar para o formulário</a>
     </div>
 
-    <script src="assets/js/script.js"></script>
+       <script src="assets/js/script.js"></script>
 
 </body>
 
