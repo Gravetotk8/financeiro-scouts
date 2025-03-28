@@ -34,7 +34,8 @@ function gerarCalendario() {
                         if (pagamentosDoDia.length > 0) {
                             valorTotalDoDia = pagamentosDoDia.reduce((total, p) => total + parseFloat(p.valor), 0);
                         }
-                        celula.innerHTML = `${diaAtual}<br>R$ ${valorTotalDoDia.toFixed(2)}`;
+                        // Modificação aqui: Colocar o dia em negrito
+                        celula.innerHTML = `<b>${diaAtual}</b><br>R$ ${valorTotalDoDia.toFixed(2)}`;
                         valorSemanal += valorTotalDoDia;
                         totalSemana++;
                         diaAtual++;
